@@ -25,11 +25,11 @@
     "feature-flags",
     "access-control"
   ],
-  "author": "",
+  "author": "Klejdi 2K",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/react-permissions-gate"
+    "url": "https://github.com/klejdi94/react-permissions-gate"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

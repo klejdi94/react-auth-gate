@@ -38,28 +38,29 @@ const POSTS: Post[] = [
 
 // Permission rules
 const rules: PermissionRulesMap<User, any> = {
-  'admin.access': ({ user }) => user.role === 'admin',
+  // Check roles array instead of user.role
+  'admin.access': ({ roles }) => roles.includes('admin'),
   
-  'user.edit': ({ user, resource }) =>
-    user.role === 'admin' || user.id === resource?.id,
+  'user.edit': ({ user, resource, roles }) =>
+    roles.includes('admin') || user.id === resource?.id,
   
-  'post.create': ({ user }) =>
-    user.role === 'admin' || user.role === 'editor',
+  'post.create': ({ roles }) =>
+    roles.includes('admin') || roles.includes('editor'),
   
-  'post.edit': ({ user, resource }) => {
+  'post.edit': ({ user, resource, roles }) => {
     if (!resource) return false;
-    return user.role === 'admin' || user.id === resource.authorId;
+    return roles.includes('admin') || user.id === resource.authorId;
   },
   
-  'post.delete': ({ user, resource }) => {
+  'post.delete': ({ user, resource, roles }) => {
     if (!resource) return false;
-    return user.role === 'admin' || user.id === resource.authorId;
+    return roles.includes('admin') || user.id === resource.authorId;
   },
   
-  'post.publish': ({ user, resource }) => {
+  'post.publish': ({ user, resource, roles }) => {
     if (!resource) return false;
-    return user.role === 'admin' || 
-           (user.role === 'editor' && user.id === resource.authorId);
+    return roles.includes('admin') || 
+           (roles.includes('editor') && user.id === resource.authorId);
   },
 };
 

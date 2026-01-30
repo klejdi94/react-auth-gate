@@ -61,11 +61,10 @@ const PANEL_STYLES = {
   tab: {
     padding: '8px 16px',
     cursor: 'pointer',
-    borderBottom: '2px solid transparent',
     display: 'inline-block',
   },
   activeTab: {
-    borderBottomColor: '#4fc3f7',
+    borderBottom: '2px solid #4fc3f7',
     color: '#4fc3f7',
   },
   tabs: {
