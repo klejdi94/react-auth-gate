@@ -7,6 +7,16 @@ title: Getting Started
 
 [← Back to Home](./)
 
+## 🎮 Live Demo
+
+Before diving in, check out the **TaskFlow demo app** to see react-auth-gate in action:
+
+**[View Demo Source Code →](https://github.com/klejdi94/demo-react-auth-gate)**
+
+The demo is a complete task management application showcasing all features of react-auth-gate.
+
+---
+
 ## Installation
 
 ```bash

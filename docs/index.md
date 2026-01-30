@@ -25,6 +25,21 @@ A **production-grade React authorization framework** that centralizes RBAC, PBAC
 
 ---
 
+## 🎮 Live Demo
+
+Check out **TaskFlow** - A full-featured task management app built with react-auth-gate:
+
+👉 **[View Demo Source Code](https://github.com/klejdi94/demo-react-auth-gate)**
+
+The demo showcases:
+- Role-based access (Admin, Manager, Member)
+- Resource-based permissions
+- Full CRUD operations with permission gates
+- Statistics dashboard with role restrictions
+- Real-time dev tools for debugging
+
+---
+
 ## 🚀 Quick Start
 
 ### Installation
@@ -140,6 +155,7 @@ The built-in dev panel lets you:
 
 - [Getting Started Guide](./getting-started.html)
 - [API Reference](./api.html)
+- [Live Demo App](https://github.com/klejdi94/demo-react-auth-gate)
 - [Examples](https://github.com/klejdi94/react-auth-gate/tree/master/examples)
 
 ---

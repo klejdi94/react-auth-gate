@@ -8,6 +8,8 @@ A production-grade React authorization framework that centralizes **RBAC**, **PB
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+📚 **[Documentation](https://klejdi94.github.io/react-auth-gate/)** • 🎮 **[Live Demo](https://github.com/klejdi94/demo-react-auth-gate)**
+
 ---
 
 ## ✨ Features
