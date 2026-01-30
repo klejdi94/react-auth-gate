@@ -39,25 +39,18 @@ export function PermissionsRoot<TUser = any>(props: PermissionsRootProps<TUser>)
   const devState = useDevToolsState();
   
   // Apply dev tools overrides if they exist
-  const effectiveProps = useMemo(() => {
-    const hasOverrides = devState.overrideRoles !== undefined ||
-                        devState.overridePermissions !== undefined ||
-                        devState.overrideFlags !== undefined;
-    
-    if (!hasOverrides) {
-      return props;
-    }
-    
-    return {
-      ...props,
-      roles: devState.overrideRoles ?? props.roles,
-      permissions: devState.overridePermissions ?? props.permissions,
-      flags: devState.overrideFlags ?? props.flags,
-    };
-  }, [props, devState.overrideRoles, devState.overridePermissions, devState.overrideFlags]);
+  const effectiveRoles = devState.overrideRoles ?? props.roles;
+  const effectivePermissions = devState.overridePermissions ?? props.permissions;
+  const effectiveFlags = devState.overrideFlags ?? props.flags;
   
   return (
-    <PermissionsProvider {...effectiveProps} onEvaluationRegister={registerEvaluation}>
+    <PermissionsProvider 
+      {...props}
+      roles={effectiveRoles}
+      permissions={effectivePermissions}
+      flags={effectiveFlags}
+      onEvaluationRegister={registerEvaluation}
+    >
       {props.children}
       <DevPanel />
     </PermissionsProvider>
