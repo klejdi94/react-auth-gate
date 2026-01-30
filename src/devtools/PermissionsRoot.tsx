@@ -5,7 +5,7 @@
  * integrates the Dev Panel in development mode.
  */
 
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useMemo } from 'react';
 import { PermissionsProvider } from '../react/PermissionsProvider';
 import { DevPanel } from './DevPanel';
 import { useDevRegister, useDevToolsState } from './useDevRegister';
@@ -38,10 +38,15 @@ export function PermissionsRoot<TUser = any>(props: PermissionsRootProps<TUser>)
   const registerEvaluation = useDevRegister();
   const devState = useDevToolsState();
   
+  // Memoize empty defaults to prevent new references on every render
+  const emptyRoles = useMemo(() => [], []);
+  const emptyPermissions = useMemo(() => [], []);
+  const emptyFlags = useMemo(() => ({}), []);
+  
   // Apply dev tools overrides if they exist
-  const effectiveRoles = devState.overrideRoles ?? props.roles ?? [];
-  const effectivePermissions = devState.overridePermissions ?? props.permissions ?? [];
-  const effectiveFlags = devState.overrideFlags ?? props.flags ?? {};
+  const effectiveRoles = devState.overrideRoles ?? props.roles ?? emptyRoles;
+  const effectivePermissions = devState.overridePermissions ?? props.permissions ?? emptyPermissions;
+  const effectiveFlags = devState.overrideFlags ?? props.flags ?? emptyFlags;
   
   // Create a key to force remount when overrides change
   const overrideKey = JSON.stringify({
