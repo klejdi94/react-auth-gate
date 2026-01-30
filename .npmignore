@@ -1,0 +1,28 @@
+# Source files
+src/
+*.ts
+*.tsx
+!*.d.ts
+
+# Config files
+tsconfig.json
+.gitignore
+
+# Examples and docs
+example.tsx
+examples/
+
+# Development
+node_modules/
+.vscode/
+.idea/
+
+# Tests
+*.test.ts
+*.test.tsx
+__tests__/
+coverage/
+
+# Misc
+*.log
+.DS_Store
