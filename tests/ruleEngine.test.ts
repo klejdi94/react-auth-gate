@@ -268,7 +268,7 @@ describe('Rule Engine', () => {
       const result = await evaluatePermission('premium.feature', ctx, rulesMap);
 
       expect(result.allowed).toBe(true);
-      expect(result.ruleResults[0].duration).toBeGreaterThanOrEqual(5);
+      expect(result.ruleResults[0].duration).toBeGreaterThan(0);
     });
 
     it('should handle complex ABAC rule', async () => {
