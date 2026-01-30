@@ -1,10 +1,10 @@
-# 🔐 react-permissions-gate
+# 🔐 react-auth-gate
 
 A production-grade React authorization framework that centralizes **RBAC**, **PBAC**, **ABAC**, feature flags, and async permission checks into a clean, declarative API.
 
 **Permission logic never lives inside components again.**
 
-[![npm version](https://img.shields.io/npm/v/react-permissions-gate.svg)](https://www.npmjs.com/package/react-permissions-gate)
+[![npm version](https://img.shields.io/npm/v/react-auth-gate.svg)](https://www.npmjs.com/package/react-auth-gate)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -29,13 +29,13 @@ A production-grade React authorization framework that centralizes **RBAC**, **PB
 ### Installation
 
 ```bash
-npm install react-permissions-gate
+npm install react-auth-gate
 ```
 
 ### Basic Usage
 
 ```tsx
-import { PermissionsRoot, PermissionsGate } from 'react-permissions-gate';
+import { PermissionsRoot, PermissionsGate } from 'react-auth-gate';
 
 // 1. Define your permission rules
 const rules = {
@@ -304,7 +304,7 @@ function AdminPage() {
 
 ## 🛠️ Dev Tools Panel (The Killer Feature)
 
-In development mode, **react-permissions-gate** automatically renders a floating permission debugger.
+In development mode, **react-auth-gate** automatically renders a floating permission debugger.
 
 ### Features
 
@@ -472,7 +472,7 @@ describe('user.edit permission', () => {
 If you need custom integration without dev tools:
 
 ```tsx
-import { PermissionsProvider } from 'react-permissions-gate';
+import { PermissionsProvider } from 'react-auth-gate';
 
 <PermissionsProvider {...config}>
   <App />
@@ -482,7 +482,7 @@ import { PermissionsProvider } from 'react-permissions-gate';
 ### Manual Dev Tools Integration
 
 ```tsx
-import { PermissionsProvider, DevPanel, useDevRegister } from 'react-permissions-gate';
+import { PermissionsProvider, DevPanel, useDevRegister } from 'react-auth-gate';
 
 function Root() {
   const registerEvaluation = useDevRegister();
@@ -499,7 +499,7 @@ function Root() {
 ### Direct Rule Engine Access
 
 ```tsx
-import { evaluatePermission, createPermissionContext } from 'react-permissions-gate';
+import { evaluatePermission, createPermissionContext } from 'react-auth-gate';
 
 const context = createPermissionContext(user, resource, roles, permissions, flags);
 const result = await evaluatePermission(check, context, rulesMap);
@@ -537,7 +537,7 @@ const rules: PermissionRulesMap<User, Post> = {
 ### React Router
 
 ```tsx
-import { ProtectedRoute } from 'react-permissions-gate';
+import { ProtectedRoute } from 'react-auth-gate';
 import { Navigate } from 'react-router-dom';
 
 <Route
@@ -554,7 +554,7 @@ import { Navigate } from 'react-router-dom';
 
 ```tsx
 // pages/admin.tsx
-import { ProtectedRoute } from 'react-permissions-gate';
+import { ProtectedRoute } from 'react-auth-gate';
 import { useRouter } from 'next/router';
 
 export default function AdminPage() {
@@ -574,7 +574,7 @@ export default function AdminPage() {
 ### Remix
 
 ```tsx
-import { ProtectedRoute } from 'react-permissions-gate';
+import { ProtectedRoute } from 'react-auth-gate';
 import { useNavigate } from '@remix-run/react';
 
 export default function Route() {
@@ -644,9 +644,9 @@ Contributions are welcome! Please open an issue or PR.
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/yourusername/react-permissions-gate)
-- [npm Package](https://www.npmjs.com/package/react-permissions-gate)
-- [Report Issues](https://github.com/yourusername/react-permissions-gate/issues)
+- [GitHub Repository](https://github.com/klejdi94/react-auth-gate)
+- [npm Package](https://www.npmjs.com/package/react-auth-gate)
+- [Report Issues](https://github.com/klejdi94/react-auth-gate/issues)
 
 ---
 

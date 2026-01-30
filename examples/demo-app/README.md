@@ -1,6 +1,6 @@
-# React Permissions Gate - Demo App
+# React Auth Gate - Demo App
 
-This is a live demo application showcasing all features of `react-permissions-gate`.
+This is a live demo application showcasing all features of `react-auth-gate`.
 
 ## 🚀 Quick Start
 
@@ -99,4 +99,4 @@ npm run build
 3. Check the console for evaluation logs (dev mode)
 4. Try overriding permissions in the dev panel
 
-Enjoy exploring react-permissions-gate!
+Enjoy exploring react-auth-gate!

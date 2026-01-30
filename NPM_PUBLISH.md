@@ -2,8 +2,9 @@
 
 ## ✅ Current Status
 
+**Package Name:** react-auth-gate  
 **Version:** 0.0.1  
-**GitHub:** https://github.com/klejdi94/react-permissions-gate ✅ **PUSHED**  
+**GitHub:** https://github.com/klejdi94/react-auth-gate ✅ **LIVE**  
 **Tests:** 18/18 passing ✅  
 **Build:** Clean ✅  
 
@@ -34,14 +35,14 @@ npm publish
 ```
 
 That's it! Your package will be live at:
-**https://www.npmjs.com/package/react-permissions-gate**
+**https://www.npmjs.com/package/react-auth-gate**
 
 ---
 
 ## 📦 Users Can Install With
 
 ```bash
-npm install react-permissions-gate
+npm install react-auth-gate
 ```
 
 ---
@@ -69,7 +70,8 @@ npm run build
 npm test
 
 # Push to GitHub
-git push && git push --tags
+git push
+git push --tags
 
 # Publish to npm
 npm publish

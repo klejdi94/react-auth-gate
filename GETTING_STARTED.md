@@ -1,15 +1,15 @@
-# Getting Started with react-permissions-gate
+# Getting Started with react-auth-gate
 
-This guide will help you set up and use react-permissions-gate in your React application.
+This guide will help you set up and use react-auth-gate in your React application.
 
 ## Installation
 
 ```bash
-npm install react-permissions-gate
+npm install react-auth-gate
 # or
-yarn add react-permissions-gate
+yarn add react-auth-gate
 # or
-pnpm add react-permissions-gate
+pnpm add react-auth-gate
 ```
 
 ## Step 1: Define Your Permission Rules
@@ -18,7 +18,7 @@ Create a file to centralize your permission logic:
 
 ```tsx
 // permissions.ts
-import { PermissionRulesMap } from 'react-permissions-gate';
+import { PermissionRulesMap } from 'react-auth-gate';
 
 interface User {
   id: string;
@@ -52,7 +52,7 @@ Use `PermissionsRoot` to provide permissions context:
 
 ```tsx
 // App.tsx
-import { PermissionsRoot } from 'react-permissions-gate';
+import { PermissionsRoot } from 'react-auth-gate';
 import { rules } from './permissions';
 
 function App() {
@@ -82,7 +82,7 @@ Protect components with declarative gates:
 
 ```tsx
 // UserProfile.tsx
-import { PermissionsGate } from 'react-permissions-gate';
+import { PermissionsGate } from 'react-auth-gate';
 
 function UserProfile({ user }) {
   return (
@@ -105,7 +105,7 @@ Check permissions programmatically:
 
 ```tsx
 // EditButton.tsx
-import { usePermission } from 'react-permissions-gate';
+import { usePermission } from 'react-auth-gate';
 
 function EditPostButton({ post }) {
   const { allowed, loading } = usePermission('post.edit', post);
@@ -124,7 +124,7 @@ Guard entire routes:
 
 ```tsx
 // AdminPage.tsx
-import { ProtectedRoute } from 'react-permissions-gate';
+import { ProtectedRoute } from 'react-auth-gate';
 import { Navigate } from 'react-router-dom';
 
 function AdminPage() {
@@ -240,7 +240,7 @@ Enable strict mode in your `tsconfig.json` for the best experience:
 Define your types for better IntelliSense:
 
 ```tsx
-import { PermissionRule } from 'react-permissions-gate';
+import { PermissionRule } from 'react-auth-gate';
 
 // Your custom types
 interface MyUser { /* ... */ }

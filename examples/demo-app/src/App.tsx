@@ -5,7 +5,7 @@ import {
   usePermission,
   Permissioned,
   PermissionRulesMap,
-} from 'react-permissions-gate';
+} from 'react-auth-gate';
 
 // Types
 interface User {

@@ -2,7 +2,7 @@
 
 ## High-Level Architecture
 
-react-permissions-gate is built with a clean, layered architecture:
+react-auth-gate is built with a clean, layered architecture:
 
 ```
 ┌─────────────────────────────────────────┐
@@ -237,7 +237,7 @@ function MyProvider({ children }) {
 ### Custom Dev Tools
 Build your own dev tools using the core hooks:
 ```tsx
-import { useDevToolsState } from 'react-permissions-gate';
+import { useDevToolsState } from 'react-auth-gate';
 
 function MyCustomDevPanel() {
   const state = useDevToolsState();
@@ -248,7 +248,7 @@ function MyCustomDevPanel() {
 ### Direct Engine Access
 Use the rule engine directly without React:
 ```tsx
-import { evaluatePermission, createPermissionContext } from 'react-permissions-gate';
+import { evaluatePermission, createPermissionContext } from 'react-auth-gate';
 
 const ctx = createPermissionContext(user, resource, roles, permissions, flags);
 const result = await evaluatePermission(check, ctx, rules);
