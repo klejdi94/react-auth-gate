@@ -631,6 +631,4 @@ Contributions are welcome! Please open an issue or PR.
 - [npm Package](https://www.npmjs.com/package/react-auth-gate)
 - [Report Issues](https://github.com/klejdi94/react-auth-gate/issues)
 
----
 
-**Built with ❤️ for developers who value clean, maintainable code.**
