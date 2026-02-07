@@ -29,7 +29,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/klejdi94/react-auth-gate"
+    "url": "git+https://github.com/klejdi94/react-auth-gate.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
